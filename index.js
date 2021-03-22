@@ -10,6 +10,10 @@ app.get('/', (req, res)=>{
   res.sendFile(__dirname + '/index.html');
 })
 
+app.get('/style.css', (req, res)=>{
+  res.sendFile(__dirname + '/style.css');
+})
+
 io.on('connection', (socket)=>{
   console.log('a user connected');
   socket.on('disconnect', ()=>{
